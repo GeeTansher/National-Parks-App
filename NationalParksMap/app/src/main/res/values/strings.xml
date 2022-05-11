@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">National Parks Map</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="maps_google_api">AIzaSyBIhPNHWCsZD-do_FX_xObJp7vvjDym9hA</string>
+    <string name="map">Map</string>
+    <string name="parks">Parks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="park_name">Park Name</string>
+    <string name="state">State</string>
+    <string name="cost">Cost: $</string>
+    <string name="infoNotAvailable">Info not available!!!</string>
+    <string name="no_directions">Directions not available!!!</string>
+    <string name="search">Search State</string>
+    <string name="hintSearch">Enter State Code: WA, OR, NY</string>
+</resources>

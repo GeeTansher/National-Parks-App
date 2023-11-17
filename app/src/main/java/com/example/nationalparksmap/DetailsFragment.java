@@ -35,9 +35,7 @@ public class DetailsFragment extends Fragment {
     }
 
     public static DetailsFragment newInstance() {
-        DetailsFragment fragment = new DetailsFragment();
-        Bundle args = new Bundle();
-        return fragment;
+        return new DetailsFragment();
     }
 
     @Override
@@ -64,16 +62,15 @@ public class DetailsFragment extends Fragment {
             description.setText(park.getDescription());
 
             StringBuilder activityString = new StringBuilder();
-            for (int i=0;i<park.getActivities().size();i++){
+            for (int i = 0; i < park.getActivities().size(); i++) {
                 activityString.append(park.getActivities().get(i).getName())
                         .append(" || ");
             }
             activities.setText(activityString);
 
-            if(park.getEntranceFees().size() >0){
+            if (park.getEntranceFees().size() > 0) {
                 entranceFees.setText(MessageFormat.format("{0}{1}", getString(R.string.cost), park.getEntranceFees().get(0).getCost()));
-            }
-            else{
+            } else {
                 entranceFees.setText(R.string.infoNotAvailable);
             }
             StringBuilder opHString = new StringBuilder();
@@ -93,22 +90,21 @@ public class DetailsFragment extends Fragment {
             }
             detailsTopics.setText(topicBuilder);
 
-            if(!TextUtils.isEmpty(park.getDirectionsInfo())) {
+            if (!TextUtils.isEmpty(park.getDirectionsInfo())) {
                 directions.setText(park.getDirectionsInfo());
-            }
-            else{
+            } else {
                 directions.setText(R.string.no_directions);
             }
 
             viewPagerAdapter = new ViewPagerAdapter(park.getImages());
             viewPager2.setAdapter(viewPagerAdapter);
         });
-        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
